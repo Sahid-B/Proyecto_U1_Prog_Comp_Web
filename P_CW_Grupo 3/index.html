@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PlanComer - Tu Planificador Inteligente</title>
+  <link rel="icon" href="/img/logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  <!-- 
+  =============================================================================
+  ARCHIVO: index.html
+  FUNCIÓN: Es la "Página Maestra" o contenedor principal (Single Page Application).
+  Aquí configuramos los metadatos, fuentes, íconos (Phosphor) y los estilos globales.
+  También dibujamos la Barra de Navegación (Nav) fija para que siempre esté visible.
+  NOTA IMPORTANTE: Todo el contenido de las otras páginas (Plan, Recetas, Compras)
+  se inyecta automáticamente adentro de la etiqueta <main id="outlet"></main> 
+  gracias a nuestro archivo main.js.
+  =============================================================================
+  -->
+  <nav class="global-nav">
+    <div class="nav-brand">
+      <img src="/img/logo.png" alt="PlanComer Logo" class="brand-logo" />
+      <span>PlanComer</span>
+    </div>
+    <div class="nav-links">
+      <a href="/" class="nav-item"><i class="ph ph-house"></i> Inicio</a>
+      <a href="/plan" class="nav-item"><i class="ph ph-calendar-blank"></i> Plan Semanal</a>
+      <a href="/recetas" class="nav-item"><i class="ph ph-book-open"></i> Recetas</a>
+      <a href="/compras" class="nav-item"><i class="ph ph-shopping-cart"></i> Compras</a>
+      <a href="/historial" class="nav-item"><i class="ph ph-clock-counter-clockwise"></i> Historial</a>
+      <a href="/ia" class="nav-item ai-btn"><i class="ph ph-magic-wand"></i> IA Planner</a>
+    </div>
+    <div class="nav-profile">
+      <a href="/cuenta" class="profile-btn"><i class="ph ph-user"></i> Mi Cuenta</a>
+    </div>
+  </nav>
+
+  <main id="outlet"></main>
+  
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
